@@ -29,11 +29,14 @@ public class EntryServlet extends HttpServlet {
 	private void perform(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 
+		// 文字コードの指定
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 
+		// 他クラスのインスタンス化
 		DisplaySetup setup = new DisplaySetup();
 
+		// 一覧表示処理への引数
 		String value = null;
 
 		// フォームから送信された値を取得
@@ -113,6 +116,7 @@ public class EntryServlet extends HttpServlet {
 				// ユーザーID,タイトル,本文を投稿TBLに登録
 				stm.executeUpdate(query);
 
+			// 例外処理
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -124,7 +128,7 @@ public class EntryServlet extends HttpServlet {
 				request.setAttribute("ERROR", Constant.NOT_EXIST_LIST);
 			}
 
-			// エラーの場合
+		// エラーの場合
 		} else if (ERROR == 1) {
 			// 遷移先の指定（新規投稿画面）
 			path = Constant.ENTRY_PATH;
