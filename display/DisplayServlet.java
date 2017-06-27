@@ -37,6 +37,7 @@ public class DisplayServlet extends HttpServlet {
 		DisplaySetup setup = new DisplaySetup();
 		JavaBeans bean = new JavaBeans();
 
+		// 一覧表示処理への引数
 		String value = null;
 
 		// ArrayListの取得
@@ -200,6 +201,7 @@ public class DisplayServlet extends HttpServlet {
 			String finish_year = request.getParameter("finish_year");
 			String finish_month = request.getParameter("finish_month");
 			
+			// 絞込みのタイトル，氏名を登録
 			session.setAttribute("search_title", search_title);
 			session.setAttribute("search_name", search_name);
 			
@@ -248,7 +250,7 @@ public class DisplayServlet extends HttpServlet {
 					sb.append(search_name);
 					sb.append("'");
 				}
-				
+				// ソートの並び順を反映（選択されている場合）
 				if(!"default".equals(session.getAttribute("sort"))){
 					sb.append(" ORDER BY tb." + session.getAttribute("sort"));
 				}
