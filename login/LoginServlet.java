@@ -30,10 +30,14 @@ public class LoginServlet extends HttpServlet {
 	private void perform(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 
+		// 文字コードの指定
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 
+		// 他クラスのインスタンス化
 		DisplaySetup setup = new DisplaySetup();
+		
+		// 一覧表示処理への引数
 		String value = null;
 
 		// 遷移先パス（デフォルト：投稿一覧画面）
@@ -93,6 +97,7 @@ public class LoginServlet extends HttpServlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher(path);
 			dispatcher.forward(request, response);
 
+		// 例外処理
 		} catch (SQLException e) {
 			e.printStackTrace();
 
