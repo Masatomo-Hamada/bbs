@@ -6,12 +6,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/** 投稿画面初期処理 */
+/** 投稿画面初期処理(投稿データ読込) */
 public class DisplaySetup {
 
 	// 投稿データの読み込み
 	public ArrayList<JavaBeans> LoadList(String value) {
 
+		// 他クラスのインスタンス化
 		JavaBeans bean = null;
 
 		// ArrayListの作成
@@ -20,11 +21,12 @@ public class DisplaySetup {
 		// クエリの作成
 		String query = "SELECT tb.TOKO_NO, tb.USER_ID, tb.TOKO_TITLE, tb.TOKO_MESSAGE, tb.TOKO_DATE, "
 				+ "tb.EDIT_DATE, mt.USER_NAME FROM TB_TOKO tb INNER JOIN MT_USER mt ON tb.USER_ID = mt.USER_ID ";
-
+		
+		// 絞込み・ソートを実行しない場合
 		if (value == null) {
 			query = query + "ORDER BY tb.EDIT_DATE DESC";
 			
-			// 絞込み,ソート処理を実行する場合
+		// 絞込み,ソート処理を実行する場合
 		} else {
 			query = query + value;
 		}
@@ -46,12 +48,14 @@ public class DisplaySetup {
 				bean.setMessage(rs.getString("tb.TOKO_MESSAGE"));
 				bean.setTokoDate(rs.getTimestamp("tb.TOKO_DATE"));
 				bean.setEditDate(rs.getTimestamp("tb.EDIT_DATE"));
-
+				
 				list.add(bean);
 			}
+		// 例外処理
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		// ArrayListを返す
 		return list;
 	}
 }
