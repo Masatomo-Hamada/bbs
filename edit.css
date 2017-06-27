@@ -1,0 +1,55 @@
+.main_title {
+	padding: 0px;
+	margin-bottom: 40px;
+	border: 5px solid black;
+}
+
+.main_title,table{
+	text-align:center;
+}
+
+.error{
+	color:red;
+}
+
+table {
+	width:50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.title{
+	margin-right: 25px;
+}
+
+.name{
+	margin-right: 40px;
+}
+
+.message{
+	margin-right: 50px;
+}
+
+.edit{
+	margin-left: 100px;
+}
+
+.cancel{
+	margin-left: 30px;
+}
+
+ul{
+	width: 55%;
+	list-style:none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+li{
+	padding: 10px;
+}
+
+.button{
+	text-align:right;
+	margin-right: 200px;
+	}

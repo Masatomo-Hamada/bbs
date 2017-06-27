@@ -1,0 +1,33 @@
+.title {
+	padding:0px;
+	margin-bottom: 60px;
+	border: 5px solid black;
+}
+
+.error {
+	color:red;
+}
+
+.form {
+	list-style: none;
+    width: 400px;
+    margin: 0 auto;
+}
+
+button {
+	margin-left:140px;
+}
+
+label {
+	margin-right: 50px;
+	width: 90px;
+	float: left;
+}
+
+.title {
+	text-align:center;
+}
+
+li {
+	padding:10px;
+}

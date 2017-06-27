@@ -1,0 +1,58 @@
+.title {
+	padding: 0px;
+	margin-bottom: 10px;
+	border: 5px solid black;
+}
+
+.title,.check,button,.edit{
+	text-align:center;
+}
+
+form{
+	display:inline;
+}
+
+.error{
+	color:red;
+	margin-left: 30px;
+}
+
+.sort,.search_title{
+	margin-right: 15px;
+}
+
+.name{
+	margin-right: 30px;
+}
+
+.toko{
+	border: 1px solid;
+	rules: none;
+}
+
+table{
+	width:90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.check{
+	width: 5%;
+}
+
+.subject{
+	width: 40%;
+}
+
+.time{
+	width: 45%;
+	text-align:right;
+}
+
+.blank{
+	width: 10%;
+}
+
+.message{
+	border: 1px solid black;
+}
