@@ -28,12 +28,15 @@ public class EditServlet extends HttpServlet {
 	// 処理実行
 	private void perform(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
+		// 文字コードの指定
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		
+		// 他クラスのインスタンス化
 		DisplaySetup setup = new DisplaySetup();
 		HttpSession session = request.getSession();
 		
+		// 一覧表示処理への引数
 		String value = null;
 		
 		// フォームから送信された値を取得
@@ -67,7 +70,7 @@ public class EditServlet extends HttpServlet {
 				path = Constant.EDIT_PATH;
 			}
 
-			// 本文が未入力,または全角・半角スペースが入力された場合
+				// 本文が未入力,または全角・半角スペースが入力された場合
 			if (message == "" || message == " " || message == "　") {
 				ERROR = 1;
 				request.setAttribute("MESSAGE_ERROR", Constant.NO_ENTRY_MESSAGE);
@@ -112,7 +115,8 @@ public class EditServlet extends HttpServlet {
 				
 				// 投稿TBLのデータを更新
 				stm.executeUpdate(query);
-
+				
+			// 例外処理
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
