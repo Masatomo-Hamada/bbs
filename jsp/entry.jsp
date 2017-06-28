@@ -4,8 +4,8 @@
 <html>
 <head>
 	<title>新規投稿画面</title>
-	<link rel="stylesheet" type="text/css" href="entry.css">
-	<script type="text/javascript" src="entry.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/entry.css">
+	<script type="text/javascript" src="js/entry.js"></script>
 </head>
 <body>
 	<form method="POST" action="./EntryServlet"　name="entry">
