@@ -5,8 +5,8 @@
 <html>
 <head>
 	<title>投稿一覧画面</title>
-	<link rel="stylesheet" type="text/css" href="display.css">
-	<script type="text/javascript" src="display.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/display.css">
+	<script type="text/javascript" src="js/display.js"></script>
 </head>
 
 <body>
