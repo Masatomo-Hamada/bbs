@@ -4,8 +4,8 @@
 <html>
 <head>
 	<title>投稿編集画面</title>
-	<link rel="stylesheet" type="text/css" href="entry.css">
-	<script type="text/javascript" src="edit.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/entry.css">
+	<script type="text/javascript" src="js/edit.js"></script>
 </head>
 <body>
 	<form method="POST" action="./EditServlet" name="edit">
