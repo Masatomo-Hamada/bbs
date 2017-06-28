@@ -3,8 +3,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>ログイン画面</title>
-	<link rel="stylesheet" type="text/css" href="login.css">
-	<script type="text/javascript" src="login.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<script type="text/javascript" src="js/login.js"></script>
 </head>
 
 <body>
